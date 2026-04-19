@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "NazarenerScan",
+    "slug": "nazarener-scan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nazarener.scan",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Die App benötigt Kamerazugriff zum Scannen von Barcodes und Aufnehmen von Produktfotos.",
+        "NSPhotoLibraryUsageDescription": "Die App benötigt Zugriff auf deine Fotos zum Hochladen von Produktbildern."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.nazarener.scan",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Die App benötigt Kamerazugriff zum Scannen von Barcodes."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Die App benötigt Zugriff auf deine Fotos."
+        }
+      ]
+    ],
+    "scheme": "nazarenerscan",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
